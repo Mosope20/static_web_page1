@@ -72,30 +72,21 @@ button a:hover{
     padding-left: 60px;
 }
 
-
-nav ul li ul{
-    display: flex;
-    align-items: center;
-    padding-top: 10px;
-}
-nav ul li ul.dropdown li{
-    display: block;
-    padding-top: 5px;
-
-}
-
-nav ul li ul.dropdown{
-    width: 180px;
-    height: 115px;
-    background: hsl(0, 0%, 98%);
+.dropdown{
+    visibility: hidden;
     position: absolute;
-    z-index: 999;
+    padding-left: 0;
+    left: 0;
     display: none;
-}
-nav ul li a:hover{
-    background: hsl(0, 0%, 98%);;
-}
+    background: hsl(0, 0%, 98%);
+  }
 
-nav ul li:hover ul.dropdown{
-    display: block;
-}
+.dropdown:hover {
+      visibility: visible;
+      display: block;
+      min-width: 250px;
+      text-align: left;
+      padding-top: 20px;
+      background: hsl(0, 0%, 98%);
+    }
+  
