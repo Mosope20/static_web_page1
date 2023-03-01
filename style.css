@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 .top_div{
-    height: 100vh;
     width: 100%;
 }
 
@@ -20,7 +19,7 @@ nav{
 nav ul li{
     list-style: none;
     display: inline-block;
-    padding-left: 35px;
+
 }
 nav ul li a{
     color: hsl(0, 0%, 41%);
@@ -51,7 +50,13 @@ nav ul li a:hover{
     margin-right: 10px;
 
 }
-button:hover{
+.button_b:hover{
+    background-color: hsl(0, 0%, 8%);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.button_a:hover{
     background-color: hsl(0, 0%, 8%);
     transition: .3s;
     cursor: pointer;
@@ -72,21 +77,53 @@ button a:hover{
     padding-left: 60px;
 }
 
-.dropdown{
-    visibility: hidden;
-    position: absolute;
-    padding-left: 0;
-    left: 0;
+ul li ul.dropdown{
+    display: block;
+}
+
+ul li ul.dropdown{
+    width:auto;
+    height: auto;
+    position:absolute;
     display: none;
+    z-index: 999;
     background: hsl(0, 0%, 98%);
+    margin-left: 100px;
+    border-radius: 8px;
+
   }
 
-.dropdown:hover {
-      visibility: visible;
+ul li:hover ul.dropdown {
       display: block;
-      min-width: 250px;
-      text-align: left;
-      padding-top: 20px;
-      background: hsl(0, 0%, 98%);
+      transition: .3s;
+      cursor: pointer;
     }
-  
+
+    nav ul li ul li{
+        list-style: none;
+        display: block;
+        padding-top: 5px;
+        text-align: left;
+        padding-left: none;
+    }
+
+    nav ul li ul li embed{
+        margin-right: 5px;
+    }
+
+h1{
+    font-size: 75px;
+    font-weight: 700;
+}
+
+.main{
+    display: flex;
+}
+.icons ul{
+    list-style: none;
+    display: flex;
+}
+.icons ul li{
+    padding-right: 30px;
+    padding-top: 80px;
+}
